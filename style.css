@@ -44,10 +44,28 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
-.foto {
-  flex: 1 1 calc(100% / 3);
+/* without media */
+/* .foto {
+  flex: 1 1 calc(100% / 4);
 }
 .foto img {
   min-width: 250px;
   max-width:700px;
+} */
+
+/* with media */
+
+.foto {
+  flex-basis: 50%;
+}
+
+@media (min-width: 768px){
+  .foto {
+    flex-basis: calc(100% / 3);
+  }
+}
+@media (min-width: 1024px){
+  .foto {
+    flex-basis: 25%;
+  }
 }
